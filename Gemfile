@@ -2,46 +2,50 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.0'
-
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
-# Use Puma as the app server
-gem 'puma', '~> 5.0'
-# Use SCSS for stylesheets
-gem 'sass-rails', '>= 6'
-# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 5.0'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
+gem 'puma', '~> 4.1'
+gem 'sass-rails'
+gem 'webpacker', '~> 5.2', '>= 5.2.1'
 gem 'turbolinks', '~> 5'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
-# Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
-gem 'bootsnap', '>= 1.4.4', require: false
+gem 'redis', '~> 4.0'
+gem 'bcrypt', '~> 3.1.7'
+gem 'image_processing', '~> 1.2'
+gem 'bootsnap', '1.5.1'
+gem 'jquery-rails'
+gem 'bootstrap-sass'
+gem 'jquery-ui-rails'
+gem 'sprockets-rails'
+gem 'webpack'
+gem 'simple_form'
+gem 'rails-controller-testing'
+gem 'faker'
+gem 'sendgrid-ruby'
+gem 'gon', '~> 6.1'
 
 group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'sqlite3', '~> 1.4', '>= 1.4.2'
+  gem 'byebug',  '9.0.6', platform: :mri
 end
 
 group :development do
-  gem 'web-console', '>= 4.1.0'
-  gem 'rack-mini-profiler', '~> 2.0'
-  gem 'listen', '~> 3.3'
-  gem 'spring'
+  gem 'web-console',           '3.5.1'
+  gem 'listen',                '3.4.1'
+  gem 'spring',                '2.1.1'
+  gem 'spring-watcher-listen', '2.0.1'
 end
 
 group :test do
-  gem 'capybara', '>= 3.26'
+  gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'minitest', '~> 5.8', '>= 5.8.4'
+  gem 'minitest-reporters'
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+group :production do
+  gem 'pg', '0.18.4'
+end
+
+
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

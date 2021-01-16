@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Dntwebsite</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload', debug: true %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', debug: true %>
+    <%= render 'layouts/shim' %>
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/header' %>
+    <% flash.each do |type, msg| %>
+      <div class="alert alert-info">
+        <%= flash[type] = msg %>
+      </div>
+    <% end %>
+    <div class="container">
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+      <%= debug(params) if Rails.env.development? %>
+    </div>
   </body>
 </html>
+
+
