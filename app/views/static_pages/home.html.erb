@@ -1,0 +1,104 @@
+<% provide(:title, "Home") %>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <style>
+        .fix{
+            display:inline-block;
+            width:10em;
+            float:left;
+            text-align:center;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- TODO: Temp header, migrate this to _header.html.erb -->
+    <nav class="navbar navbar-light bg-light static-top">
+      <div class="container">
+        <%= link_to(image_tag("dnt.gif"), root_path) %>
+      </div>
+    </nav>
+
+    <!-- Masthead -->
+    <header class="masthead text-white text-center">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <h1 class="mb-5">Welcome to DNT Dental Laboratories Inc.!</h1>
+            <h2 class="mb-5">Providing quality service to the dental community since 1974</h2>
+          </div>
+          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+            
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Icons -->
+    <section class="features-icons bg-light text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                        <div class="features-icons-icon d-flex">
+                            <i class="icon-screen-desktop m-auto text-primary" href="/contact"></i>
+                        </div>
+                        <h3>New Design</h3>
+                        <p class="lead mb-0">Text can go here as well!</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                        <div class="features-icons-icon d-flex">
+                            <i class="icon-layers m-auto text-primary"></i>
+                        </div>
+                        <h3>And Here!</h3>
+                        <p class="lead mb-0">Here as well!</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                        <div class="features-icons-icon d-flex">
+                            <i class="icon-check m-auto text-primary"></i>
+                        </div>
+                        <h3>Can't forget about here!</h3>
+                        <p class="lead mb-0">Or here!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Images -->
+    <section class="showcase">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters">
+          
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('<%= image_path("bg-showcase-1.jpg") %>');"></div>
+          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+            <h2>Insert Text Here</h2>
+            <p class="lead mb-0">And Here as well!</p>
+          </div>        
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-6 text-white showcase-img" style="background-image: url('<%= image_path("bg-showcase-2") %>');"></div>
+          <div class="col-lg-6 my-auto showcase-text">
+            <h2>Updated Design</h2>
+            <p classs="lead mb-0">Add more text here</p>
+          </div>
+        </div>
+      </div>
+    </section>
+</body>
+
+</html>
