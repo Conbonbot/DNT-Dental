@@ -24,7 +24,9 @@
     <!-- TODO: Temp header, migrate this to _header.html.erb -->
     <nav class="navbar navbar-light bg-light static-top">
       <div class="container">
-        <%= link_to(image_tag("dnt.gif"), root_path) %>
+        <a href="/">
+          <img src="<%= asset_path("dnt.gif")%>">
+        </a>
       </div>
     </nav>
 
@@ -86,14 +88,14 @@
       <div class="container-fluid p-0">
         <div class="row no-gutters">
           
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('<%= image_path("bg-showcase-1.jpg") %>');"></div>
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('<%= asset_path("bg-showcase-1.jpg") %>');"></div>
           <div class="col-lg-6 order-lg-1 my-auto showcase-text">
             <h2>Insert Text Here</h2>
             <p class="lead mb-0">And Here as well!</p>
           </div>        
         </div>
         <div class="row no-gutters">
-          <div class="col-lg-6 text-white showcase-img" style="background-image: url('<%= image_path("bg-showcase-2") %>');"></div>
+          <div class="col-lg-6 text-white showcase-img" style="background-image: url('<%= asset_path("bg-showcase-2") %>');"></div>
           <div class="col-lg-6 my-auto showcase-text">
             <h2>Updated Design</h2>
             <p classs="lead mb-0">Add more text here</p>
