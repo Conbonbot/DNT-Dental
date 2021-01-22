@@ -1,2 +1,101 @@
-<h1>StaticPages#contact</h1>
-<p>Find me in app/views/static_pages/contact.html.erb</p>
+<% provide(:title, "Contact") %>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <style>
+        .fix{
+            display:inline-block;
+            width:10em;
+            float:left;
+            text-align:center;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- TODO: Temp header, migrate this to _header.html.erb -->
+    <nav class="navbar navbar-light bg-light static-top">
+      <div class="container">
+        <a href="/">
+          <img src="<%= asset_path("dnt.gif")%>">
+        </a>
+      </div>
+    </nav>
+
+    <header class="masthead text-center" style="background: url('<%= asset_path("bg-masthead.jpg") %>') no-repeat center center;">
+    <section class="testimonials text-center bg-light">
+      <div class="container">
+        <h2 class="mb-5">Contact Us!</h2>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <img class="img-fluid rounded-circle mb-3" src="<%= asset_url("testimonials-1.jpg") %>" alt="">
+              <h5>Contact Name #1</h5>
+              <p class="font-weight-light mb-0">
+                Add Contact Information
+                <br>
+                <a href="tel:8185553333">
+                  <i class="icon-phone m-auto text-primary"></i>
+                  Contact me at 818-555-3333
+                </a>
+                <br>
+                <a href="mailto:contact1@info.com">
+                  <i class="icon-envelope-letter m-auto text-primary"></i>
+                  Email me at contact1@info.com
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <img class="img-fluid rounded-circle mb-3" src="<%= asset_url("testimonials-2.jpg") %>" alt="">
+              <h5>Contact Name #2</h5>
+              <p class="font-weight-light mb-0">
+                Add Contact Information
+                <br>
+                <a href="tel:8185552222">
+                  <i class="icon-phone m-auto text-primary"></i>
+                  Contact me at 818-555-2222
+                </a>
+                <br>
+                <a href="mailto:contact2@info.com">
+                  <i class="icon-envelope-letter m-auto text-primary"></i>
+                  Email me at contact2@info.com
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+              <img class="img-fluid rounded-circle mb-3" src="<%= asset_url("testimonials-3.jpg") %>" alt="">
+              <h5>Contact Name #3</h5>
+              <p class="font-weight-light mb-0">
+                Add Contact Information
+                <br>
+                <a href="tel:8185551111">
+                  <i class="icon-phone m-auto text-primary"></i>
+                  Contact me at 818-555-1111
+                </a>
+                <br>
+                <a href="mailto:contact3@info.com">
+                  <i class="icon-envelope-letter m-auto text-primary"></i>
+                  Email me at contact3@info.com
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </header>
+</body>
+
+
+</html>
